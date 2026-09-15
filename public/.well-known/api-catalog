@@ -1,0 +1,1 @@
+{"linkset":[{"anchor":"https://mp3miditool.com/api/agent","service-desc":[{"href":"https://mp3miditool.com/openapi.json","type":"application/vnd.oai.openapi+json;version=3.1"}],"service-doc":[{"href":"https://mp3miditool.com/ai/","type":"text/markdown"}],"status":[{"href":"https://mp3miditool.com/api/agent?task=list_pages","type":"application/json"}]}]}

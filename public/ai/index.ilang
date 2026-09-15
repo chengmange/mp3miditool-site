@@ -1,0 +1,8 @@
+::SERVICE_INDEX
+name: MP3 MIDI Tool
+origin: https://mp3miditool.com
+purpose: Browser-based audio and MIDI conversion tools with public articles.
+lookup: GET https://mp3miditool.com/api/agent?task=list_pages
+read: GET https://mp3miditool.com/api/agent?path=<allow-listed-path>
+constraints: Read-only, bounded to the site's public pages, no arbitrary URL fetching, no file upload, no credentials.
+instructions: Preserve page identifiers, qualifiers, dates, limits, and unknowns. Answer in the visitor's language, cite the canonical page URL, and give concrete next steps.

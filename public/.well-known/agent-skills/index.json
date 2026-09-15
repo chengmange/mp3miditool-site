@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "site-lookup",
+      "type": "skill-md",
+      "description": "Retrieve and explain the real public pages of MP3 MIDI Tool through its bounded read-only lookup service.",
+      "url": "https://mp3miditool.com/ai/skills/site-lookup/SKILL.md",
+      "digest": "sha256:273dec78df8aae20965ebeb423ec5c0b9fef9815b9e488e52958806f1918c002"
+    }
+  ]
+}

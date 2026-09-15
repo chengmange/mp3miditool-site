@@ -1,0 +1,95 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "MP3 MIDI Tool public lookup API",
+    "version": "1.0.0",
+    "description": "Bounded, read-only access to the site's current public pages. Media conversion remains in the visitor's browser."
+  },
+  "servers": [{ "url": "https://mp3miditool.com" }],
+  "paths": {
+    "/api/agent": {
+      "get": {
+        "operationId": "lookupSitePage",
+        "summary": "List or read a public site page",
+        "description": "Use task=list_pages to list the allow-listed pages, or pass one returned path to read that page. Arbitrary URLs and uploads are not accepted.",
+        "parameters": [
+          {
+            "name": "task",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "string", "const": "list_pages" },
+            "description": "Return the bounded list of public pages."
+          },
+          {
+            "name": "path",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["/", "/wav-to-midi/", "/audio-to-sheet-music/", "/midi-to-sheet-music/", "/midi-to-mp3/", "/about/", "/contact/", "/privacy/"]
+            },
+            "description": "One canonical path returned by the list operation."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A bounded page list or the selected page",
+            "content": { "application/json": { "schema": { "$ref": "#/components/schemas/LookupResponse" } } }
+          },
+          "400": { "description": "Missing or conflicting lookup parameters" },
+          "404": { "description": "The path is not in the public allow-list" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PageSummary": {
+        "type": "object",
+        "required": ["identifier", "path", "canonical_url", "title", "task"],
+        "properties": {
+          "identifier": { "type": "string" },
+          "path": { "type": "string" },
+          "canonical_url": { "type": "string", "format": "uri" },
+          "title": { "type": "string" },
+          "task": { "type": "string" }
+        }
+      },
+      "Page": {
+        "allOf": [
+          { "$ref": "#/components/schemas/PageSummary" },
+          {
+            "type": "object",
+            "required": ["source_url", "content"],
+            "properties": {
+              "source_url": { "type": "string", "format": "uri" },
+              "content": { "type": "string" }
+            }
+          }
+        ]
+      },
+      "LookupResponse": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["service", "task", "pages"],
+            "properties": {
+              "service": { "type": "string" },
+              "task": { "const": "list_pages" },
+              "pages": { "type": "array", "items": { "$ref": "#/components/schemas/PageSummary" } }
+            }
+          },
+          {
+            "type": "object",
+            "required": ["service", "task", "page"],
+            "properties": {
+              "service": { "type": "string" },
+              "task": { "const": "read_page" },
+              "page": { "$ref": "#/components/schemas/Page" }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

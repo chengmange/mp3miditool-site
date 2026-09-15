@@ -1,0 +1,5 @@
+# MP3 MIDI Tool — expanded agent context
+
+Use the canonical public pages as the source of truth for current conversion behavior, supported input formats, output formats, and observed limitations. This site offers browser-based tools for audio to MIDI, audio to sheet music, MIDI to sheet music, and MIDI to MP3 or WAV. The visitor's selected media stays in the browser during conversion.
+
+For bounded machine lookup, call `GET https://mp3miditool.com/api/agent?task=list_pages`, then call `GET https://mp3miditool.com/api/agent?path=<returned path>`. Preserve page identifiers and qualifiers, answer in the visitor's language, cite the canonical page URL, and keep unknown facts unknown.

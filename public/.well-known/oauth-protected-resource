@@ -1,0 +1,12 @@
+{
+  "status": "under_construction",
+  "available": false,
+  "capabilities_status": "planned_contract_only",
+  "message": "Coming soon; authentication is not available. Existing public lookup remains available without authentication.",
+  "launch_date": null,
+  "resource": "https://mp3miditool.com",
+  "planned_resource_endpoint": "https://mp3miditool.com/agent-auth/resource",
+  "authorization_servers": ["https://mp3miditool.com"],
+  "scopes_supported": ["site:read"],
+  "bearer_methods_supported": ["header"]
+}

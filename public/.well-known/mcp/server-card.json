@@ -1,0 +1,9 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card.json",
+  "serverInfo": { "name": "MP3 MIDI Tool Site Lookup", "version": "1.0.0" },
+  "name": "MP3 MIDI Tool Site Lookup",
+  "version": "1.0.0",
+  "endpoint": "https://mp3miditool.com/mcp",
+  "transport": { "type": "streamable-http", "endpoint": "https://mp3miditool.com/mcp" },
+  "capabilities": { "tools": {} }
+}

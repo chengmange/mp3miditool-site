@@ -4,3 +4,4 @@ dist/
 .playwright-browsers/
 .wrangler-home/
 *.log
+.wrangler/

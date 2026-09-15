@@ -1,0 +1,15 @@
+# MP3 MIDI Tool
+
+> Browser-based audio and MIDI conversion tools with public guides.
+
+## Core pages
+
+- [MP3 to MIDI](https://mp3miditool.com/): Convert MP3, M4A, or FLAC in the visitor's browser.
+- [WAV to MIDI](https://mp3miditool.com/wav-to-midi/): Convert WAV, MP3, M4A, or FLAC in the visitor's browser.
+- [Audio to Sheet Music](https://mp3miditool.com/audio-to-sheet-music/): Render detected notes as downloadable notation.
+- [MIDI to Sheet Music](https://mp3miditool.com/midi-to-sheet-music/): Render a MIDI file as notation.
+- [MIDI to MP3](https://mp3miditool.com/midi-to-mp3/): Render MIDI to MP3 or WAV locally.
+
+## Agent access
+
+Read the [agent guide](https://mp3miditool.com/ai/) or use the bounded [public lookup API](https://mp3miditool.com/api/agent?task=list_pages). Files selected for conversion are not uploaded to the server.

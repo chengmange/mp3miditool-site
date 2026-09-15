@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+Agentmap: https://mp3miditool.com/.well-known/ai-catalog.json
+
 Sitemap: https://mp3miditool.com/sitemap.xml

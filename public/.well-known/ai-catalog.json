@@ -1,0 +1,30 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "MP3 MIDI Tool",
+    "identifier": "did:web:mp3miditool.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:mp3miditool.com:server:site-lookup",
+      "displayName": "MP3 MIDI Tool site lookup MCP server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://mp3miditool.com/.well-known/mcp/server-card.json",
+      "representativeQueries": ["Which public pages explain audio to MIDI conversion?", "Read the MIDI to MP3 guide"]
+    },
+    {
+      "identifier": "urn:air:mp3miditool.com:api:site-lookup",
+      "displayName": "MP3 MIDI Tool public lookup API",
+      "type": "application/vnd.oai.openapi+json;version=3.1",
+      "url": "https://mp3miditool.com/openapi.json",
+      "representativeQueries": ["List the public conversion pages", "Read the WAV to MIDI page"]
+    },
+    {
+      "identifier": "urn:air:mp3miditool.com:skill:site-lookup",
+      "displayName": "MP3 MIDI Tool site lookup skill",
+      "type": "text/markdown",
+      "url": "https://mp3miditool.com/ai/skills/site-lookup/SKILL.md",
+      "representativeQueries": ["How should an agent read this site's pages?", "What must be preserved when answering from the lookup API?"]
+    }
+  ]
+}

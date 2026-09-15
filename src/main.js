@@ -6,6 +6,7 @@ import './styles.css';
 import './footer.css';
 import './home-umbrella.css';
 import './affiliate.css';
+import './webmcp.js';
 
 document.querySelector('#article-content').innerHTML = marked.parse(mp3Article);
 
