@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Convert MP3 or WAV audio to visible sheet music in your browser for free, without an account, then download MusicXML or SVG." />
+    <meta name="description" content="Convert MP3, WAV, M4A, or FLAC audio to visible sheet music in your browser for free, without an account, then download MusicXML or SVG." />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312835f'/%3E%3Cpath d='M20 7v13.2a4 4 0 1 1-2-3.46V10.7l-8 2v9.2a4 4 0 1 1-2-3.46V10l12-3Z' fill='white'/%3E%3C/svg%3E" />
     <title>Audio to Sheet Music Converter Free | MP3 MIDI Tool</title>
   </head>
@@ -18,7 +18,7 @@
           <p class="eyebrow">Audio to sheet music converter</p>
           <h1 id="hero-title">Turn an audio recording into visible, downloadable sheet music.</h1>
           <ol class="answer-steps">
-            <li>Choose an <code>.mp3</code>, <code>.wav</code>, or <code>.mid</code> file.</li>
+            <li>Choose an <code>.mp3</code>, <code>.wav</code>, <code>.m4a</code>, <code>.flac</code>, or <code>.mid</code> file.</li>
             <li>Set the tempo and click <strong>Create sheet music</strong>.</li>
             <li>Review the generated staff, then download MusicXML or SVG.</li>
           </ol>
@@ -30,8 +30,8 @@
         <div class="converter-card" aria-live="polite">
           <div class="converter-heading"><h2>Audio to sheet music</h2><span class="chip">Local processing</span></div>
           <label class="file-picker" id="drop-zone" for="audio-file">
-            <input id="audio-file" type="file" accept="audio/mpeg,audio/wav,audio/x-wav,audio/midi,.mp3,.wav,.mid,.midi" />
-            <span class="file-icon" aria-hidden="true">♬</span><span class="file-title">Choose audio or MIDI</span><span class="file-subtitle">MP3, WAV, MID, or MIDI</span>
+            <input id="audio-file" type="file" accept="audio/mpeg,audio/wav,audio/x-wav,audio/mp4,audio/x-m4a,audio/flac,audio/midi,.mp3,.wav,.m4a,.flac,.mid,.midi" />
+            <span class="file-icon" aria-hidden="true">♬</span><span class="file-title">Choose audio or MIDI</span><span class="file-subtitle">MP3, WAV, M4A, FLAC, MID, or MIDI</span>
           </label>
           <p id="file-name" class="file-name">No file selected</p>
           <label class="tempo-field" for="tempo"><span>Score tempo</span><span><input id="tempo" type="number" min="40" max="240" step="1" value="120" /> BPM</span></label>
@@ -70,7 +70,7 @@
       </section>
 
       <article class="article-shell prose sheet-article">
-        <h2>Convert audio to sheet music online free, without a login</h2>
+        <h2>Convert MP3, M4A, or FLAC to sheet music online free, without a login</h2>
         <p>The converter runs after you select a file; it does not open a sign-up form or payment screen. Audio decoding, note recognition, score construction, and engraving happen in this browser tab. The code does not stop at 30 seconds, though a longer recording consumes more memory and takes longer to analyze.</p>
 
         <h2>Use the MP3 to sheet music converter</h2>

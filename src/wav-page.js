@@ -18,7 +18,8 @@ let selectedFile;
 
 function acceptedFormat(file) {
   const name = file.name.toLowerCase();
-  return file.type === 'audio/wav' || file.type === 'audio/x-wav' || file.type === 'audio/mpeg' || name.endsWith('.wav') || name.endsWith('.mp3');
+  return ['audio/wav', 'audio/x-wav', 'audio/mpeg', 'audio/mp4', 'audio/x-m4a', 'audio/flac'].includes(file.type)
+    || /\.(wav|mp3|m4a|flac)$/i.test(name);
 }
 
 function showResult(message, kind, href, downloadName) {
@@ -51,8 +52,8 @@ function setFile(file) {
     selectedFile = undefined;
     fileInput.value = '';
     convertButton.disabled = true;
-    fileName.textContent = 'Please choose a WAV or MP3 file.';
-    showResult('This converter accepts WAV and MP3 files.', 'error');
+    fileName.textContent = 'Please choose a WAV, MP3, M4A, or FLAC file.';
+    showResult('This converter accepts WAV, MP3, M4A, and FLAC files.', 'error');
     return;
   }
   selectedFile = file;
@@ -82,7 +83,8 @@ async function convert() {
   convertButton.disabled = true;
   result.hidden = true;
   try {
-    const inputLabel = selectedFile.name.toLowerCase().endsWith('.wav') ? 'WAV' : 'MP3';
+    const name = selectedFile.name.toLowerCase();
+    const inputLabel = name.endsWith('.wav') ? 'WAV' : name.endsWith('.m4a') ? 'M4A' : name.endsWith('.flac') ? 'FLAC' : 'MP3';
     setProgress(4, `Reading your ${inputLabel} locally…`);
     const bytes = await selectedFile.arrayBuffer();
     const AudioContextClass = window.AudioContext || window.webkitAudioContext;
@@ -104,7 +106,7 @@ async function convert() {
     if (!notes.length) throw new Error('No stable notes were detected. Try a clearer, shorter clip with one instrument or voice.');
     const midiBytes = makeMidi(notes);
     if (!midiBytes || midiBytes.byteLength < 20) throw new Error('The MIDI file could not be created.');
-    const filename = `${selectedFile.name.replace(/\.(wav|mp3)$/i, '') || 'conversion'}.mid`;
+    const filename = `${selectedFile.name.replace(/\.(wav|mp3|m4a|flac)$/i, '') || 'conversion'}.mid`;
     const href = URL.createObjectURL(new Blob([midiBytes], { type: 'audio/midi' }));
     setProgress(100, `Done — ${notes.length} notes found.`);
     showResult(`Your MIDI file is ready. ${notes.length} notes were detected.`, 'success', href, filename);

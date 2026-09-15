@@ -35,7 +35,8 @@ let objectUrls = [];
 
 function acceptedFormat(file) {
   if (midiOnlyPage) return isMidi(file);
-  return /\.(mp3|wav|mid|midi)$/i.test(file.name) || ['audio/mpeg', 'audio/wav', 'audio/x-wav', 'audio/midi'].includes(file.type);
+  return /\.(mp3|wav|m4a|flac|mid|midi)$/i.test(file.name)
+    || ['audio/mpeg', 'audio/wav', 'audio/x-wav', 'audio/mp4', 'audio/x-m4a', 'audio/flac', 'audio/midi'].includes(file.type);
 }
 
 function isMidi(file) {
@@ -62,8 +63,8 @@ function setFile(file) {
     selectedFile = undefined;
     fileInput.value = '';
     convertButton.disabled = true;
-    fileName.textContent = midiOnlyPage ? 'Please choose a .mid or .midi file.' : 'Please choose an MP3, WAV, MID, or MIDI file.';
-    showResult(midiOnlyPage ? 'This page accepts MIDI files only: .mid or .midi.' : 'This converter accepts MP3, WAV, MID, and MIDI files.', 'error');
+    fileName.textContent = midiOnlyPage ? 'Please choose a .mid or .midi file.' : 'Please choose an MP3, WAV, M4A, FLAC, MID, or MIDI file.';
+    showResult(midiOnlyPage ? 'This page accepts MIDI files only: .mid or .midi.' : 'This converter accepts MP3, WAV, M4A, FLAC, MID, and MIDI files.', 'error');
     return;
   }
   if (midiOnlyPage && file.size > MAX_MIDI_FILE_BYTES) {
@@ -278,7 +279,7 @@ async function convert() {
     setProgress(84, 'Building MusicXML…');
     const bpm = Math.max(40, Math.min(240, Number.parseInt(tempoInput.value, 10) || 120));
     tempoInput.value = String(bpm);
-    const stem = selectedFile.name.replace(/\.(mp3|wav|mid|midi)$/i, '') || 'transcription';
+    const stem = selectedFile.name.replace(/\.(mp3|wav|m4a|flac|mid|midi)$/i, '') || 'transcription';
     const { xml, noteCount: detectedNotes } = buildMusicXml(notes, bpm, stem);
     setProgress(91, 'Drawing the staff…');
     scoreSection.hidden = false;

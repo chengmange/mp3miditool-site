@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Convert a WAV file into editable MIDI in your browser. The audio stays on your device." />
+    <meta name="description" content="Convert WAV, MP3, M4A, or FLAC audio into editable MIDI in your browser. The audio stays on your device." />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312835f'/%3E%3Cpath d='M20 7v13.2a4 4 0 1 1-2-3.46V10.7l-8 2v9.2a4 4 0 1 1-2-3.46V10l12-3Z' fill='white'/%3E%3C/svg%3E" />
     <title>WAV into MIDI Converter | MP3 MIDI Tool</title>
   </head>
@@ -18,7 +18,7 @@
           <p class="eyebrow">WAV into MIDI</p>
           <h1 id="hero-title">Convert a WAV file into editable MIDI.</h1>
           <ol class="answer-steps">
-            <li>Choose a <code>.wav</code> file below.</li>
+            <li>Choose a <code>.wav</code>, <code>.mp3</code>, <code>.m4a</code>, or <code>.flac</code> file below.</li>
             <li>Click <strong>Convert to MIDI</strong>.</li>
             <li>Download the generated <code>.mid</code> file.</li>
           </ol>
@@ -27,14 +27,14 @@
         <div class="converter-card" aria-live="polite">
           <div class="converter-heading"><h2>WAV to MIDI converter</h2><span class="chip">Local processing</span></div>
           <label class="file-picker" id="drop-zone" for="audio-file">
-            <input id="audio-file" type="file" accept="audio/wav,audio/x-wav,.wav,audio/mpeg,.mp3" />
-            <span class="file-icon" aria-hidden="true">♫</span><span class="file-title">Choose a WAV</span><span class="file-subtitle">or drop a WAV or MP3 here</span>
+            <input id="audio-file" type="file" accept="audio/wav,audio/x-wav,.wav,audio/mpeg,.mp3,audio/mp4,audio/x-m4a,.m4a,audio/flac,.flac" />
+            <span class="file-icon" aria-hidden="true">♫</span><span class="file-title">Choose an audio file</span><span class="file-subtitle">WAV, MP3, M4A, or FLAC</span>
           </label>
           <p id="file-name" class="file-name">No file selected</p>
           <button id="convert-button" class="primary-button" type="button" disabled>Convert to MIDI</button>
           <div class="progress-wrap" id="progress-wrap" hidden><div class="progress-label"><span id="progress-copy">Preparing audio…</span><span id="progress-value">0%</span></div><div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div></div>
           <div id="result" class="result" hidden></div>
-          <p class="small-print">The same converter accepts WAV and MP3 so you can compare the results without switching tools.</p>
+          <p class="small-print">The same converter accepts WAV, MP3, M4A, and FLAC so you can compare formats without switching tools.</p>
         </div>
       </section>
       <section class="affiliate-callout" aria-label="MIDI Agent recommendation">
