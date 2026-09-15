@@ -16,16 +16,20 @@ The planned anonymous credential type is an access token for the `site:read` sco
   message: Coming soon; authentication is not available.
   launch_date: null
   agent_audience: agents that need public site discovery
-  skill: https://mp3miditool.com/ai/skills/site-lookup/SKILL.md
-  register_uri: https://mp3miditool.com/agent-auth/register
-  identity_types_supported: [anonymous]
-  anonymous:
+  agent_auth:
     status: under_construction
     available: false
-    credential_types_supported: [access_token]
+    capabilities_status: planned_contract_only
+    skill: https://mp3miditool.com/ai/skills/site-lookup/SKILL.md
     register_uri: https://mp3miditool.com/agent-auth/register
-    claim_uri: https://mp3miditool.com/agent-auth/claim
-    scopes_supported: [site:read]
+    identity_types_supported: [anonymous]
+    anonymous:
+      status: under_construction
+      available: false
+      credential_types_supported: [access_token]
+      register_uri: https://mp3miditool.com/agent-auth/register
+      claim_uri: https://mp3miditool.com/agent-auth/claim
+      scopes_supported: [site:read]
   instruction: Do not attempt registration, claims, token exchange, or protected operations while available is false.
 ```
 
