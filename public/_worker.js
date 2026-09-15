@@ -23,6 +23,10 @@ const MACHINE_PATHS = [
   '/.well-known/jwks.json', '/auth.md', '/llms.txt', '/llms-full.txt',
 ];
 const MACHINE_PATH_SET = new Set(MACHINE_PATHS);
+const JSON_METADATA_PATH_SET = new Set([
+  '/.well-known/api-catalog', '/.well-known/oauth-authorization-server',
+  '/.well-known/oauth-protected-resource', '/.well-known/jwks.json',
+]);
 
 function jsonResponse(value, status = 200, extraHeaders = {}) {
   const headers = new Headers({
@@ -227,6 +231,7 @@ async function serve(request, env) {
   }
   if (url.pathname === '/auth.md') headers.set('content-type', 'text/markdown; charset=utf-8');
   if (url.pathname === '/.well-known/api-catalog') headers.set('content-type', 'application/linkset+json; charset=utf-8');
+  if (JSON_METADATA_PATH_SET.has(url.pathname) && url.pathname !== '/.well-known/api-catalog') headers.set('content-type', 'application/json; charset=utf-8');
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }
 
