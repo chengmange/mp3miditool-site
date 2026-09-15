@@ -1,0 +1,108 @@
+{
+  "generatedSource": {
+    "sampleRate": 44100,
+    "channels": 1,
+    "seconds": 4,
+    "notes": [
+      "A4",
+      "C5",
+      "E5",
+      "G5"
+    ],
+    "noteSeconds": 1,
+    "mp3Kbps": 128
+  },
+  "thresholds": {
+    "frame": 0.25,
+    "onset": 0.25,
+    "minimumNoteFrames": 5,
+    "longNoteSeconds": 0.5
+  },
+  "wav": {
+    "input": "four-note-test.wav",
+    "inputBytes": 352844,
+    "decodedSampleRate": 44100,
+    "decodedChannels": 1,
+    "decodedSeconds": 4,
+    "noteCount": 5,
+    "longNotes": 4,
+    "shortNotes": 1,
+    "missed": [],
+    "midiBytes": 93,
+    "midiTracks": 1,
+    "midiParsedNoteCount": 5,
+    "detected": [
+      {
+        "pitch": 79,
+        "start": 3.0199,
+        "duration": 0.952
+      },
+      {
+        "pitch": 76,
+        "start": 1.9866,
+        "duration": 1.0101
+      },
+      {
+        "pitch": 72,
+        "start": 0.9985,
+        "duration": 0.9881
+      },
+      {
+        "pitch": 69,
+        "start": 0.9288,
+        "duration": 0.0697
+      },
+      {
+        "pitch": 69,
+        "start": 0.0232,
+        "duration": 0.9056
+      }
+    ]
+  },
+  "mp3": {
+    "input": "four-note-test.mp3",
+    "inputBytes": 64783,
+    "decodedSampleRate": 44100,
+    "decodedChannels": 1,
+    "decodedSeconds": 4.04898,
+    "noteCount": 6,
+    "longNotes": 4,
+    "shortNotes": 2,
+    "missed": [],
+    "midiBytes": 101,
+    "midiTracks": 1,
+    "midiParsedNoteCount": 6,
+    "detected": [
+      {
+        "pitch": 79,
+        "start": 3.0431,
+        "duration": 0.9649
+      },
+      {
+        "pitch": 76,
+        "start": 2.0098,
+        "duration": 1.0101
+      },
+      {
+        "pitch": 72,
+        "start": 1.9621,
+        "duration": 0.0593
+      },
+      {
+        "pitch": 72,
+        "start": 1.0217,
+        "duration": 0.9404
+      },
+      {
+        "pitch": 69,
+        "start": 0.952,
+        "duration": 0.0697
+      },
+      {
+        "pitch": 69,
+        "start": 0.0464,
+        "duration": 0.9056
+      }
+    ]
+  }
+}

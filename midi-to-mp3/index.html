@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A practical guide to converting MIDI to MP3 without silent files or failed exports." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312835f'/%3E%3Cpath d='M20 7v13.2a4 4 0 1 1-2-3.46V10.7l-8 2v9.2a4 4 0 1 1-2-3.46V10l12-3Z' fill='white'/%3E%3C/svg%3E" />
+    <title>Convert MIDI to MP3 | MP3 MIDI Tool</title>
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href="/" aria-label="MP3 MIDI Tool home">MP3<span>MIDI</span>Tool</a><nav aria-label="Primary navigation"><a href="/#converter">MP3 to MIDI</a><a href="/wav-to-midi/">WAV to MIDI</a><a href="/midi-to-sheet-music/">MIDI to Sheet Music</a><a href="/midi-to-mp3/">MIDI to MP3</a></nav></header>
+    <main>
+      <section class="converter-card midi-audio-tool" id="midi-renderer" aria-labelledby="midi-renderer-title">
+        <div class="converter-heading"><h2 id="midi-renderer-title">Convert MIDI to MP3 or WAV</h2><span class="chip">Local rendering</span></div>
+        <p class="midi-tool-lede">Choose a <code>.mid</code> or <code>.midi</code> file, select an audio format, and render it in this browser. Your file is not uploaded to a server.</p>
+        <label class="file-picker" id="midi-drop-zone" for="midi-file">
+          <input id="midi-file" type="file" accept=".mid,.midi,audio/midi,audio/x-midi" />
+          <span class="file-icon" aria-hidden="true">♫</span><span class="file-title">Choose a MIDI file</span><span class="file-subtitle">Type 0 and Type 1 files are supported</span>
+        </label>
+        <p id="midi-file-name" class="file-name">No file selected</p>
+        <div class="midi-format-row"><label for="output-format">Output format</label><select id="output-format"><option value="mp3">MP3</option><option value="wav">WAV</option></select></div>
+        <button id="midi-convert-button" class="primary-button" type="button" disabled>Render audio</button>
+        <div class="progress-wrap" id="midi-progress-wrap" hidden><div class="progress-label"><span id="midi-progress-copy">Preparing MIDI…</span><span id="midi-progress-value">0%</span></div><div class="progress-track"><div class="progress-bar" id="midi-progress-bar"></div></div></div>
+        <div id="midi-result" class="result" hidden></div>
+        <div id="midi-audio-result" class="midi-audio-result" hidden><audio id="midi-preview" controls preload="metadata"></audio><div id="midi-downloads" class="midi-downloads"></div></div>
+        <p class="small-print">Limit: 10 MB per file, 10 minutes per performance, and 5,000 notes. WAV is 44.1 kHz, 16-bit PCM; MP3 is 128 kbps.</p>
+      </section>
+      <section class="article-hero"><p class="eyebrow">Practical export guide</p><h1>Convert MIDI to MP3</h1><p>Concrete checks for silent files, troublesome exports, and long rendering jobs. For a MIDI to WAV conversion, choose WAV above; to convert MIDI to WAV, the render stays in this browser.</p></section><section class="affiliate-callout" aria-label="MIDI Agent recommendation"><p><strong>Keep the MIDI editable:</strong> MIDI Agent is a text-to-MIDI AI music plugin for your DAW that generates melodies, chords, drums, and basslines from prompts.</p><a href="https://midiagent.com?fp_ref=mp3miditool" target="_blank" rel="sponsored noopener">Explore MIDI Agent</a></section><article class="article-shell prose" id="article-content"></article><section class="midi-faq article-shell" aria-labelledby="midi-faq-title"><p class="eyebrow">Quick questions</p><h2 id="midi-faq-title">MIDI to WAV conversion in the browser</h2><h3>Can I make WAV instead of MP3?</h3><p>Yes. Select WAV in the output menu before rendering. The file is an uncompressed 44.1 kHz, 16-bit PCM WAV.</p><h3>Does this upload my MIDI file?</h3><p>No. Parsing, synthesis, and encoding run in the visitor's browser. The MIDI file stays on the device.</p></section></main>
+    <footer class="site-footer">
+      <a class="brand" href="/">MP3<span>MIDI</span>Tool</a>
+      <p>Local audio conversion. No file uploads.</p>
+      <p class="affiliate-disclosure">Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/#converter">MP3 to MIDI</a>
+        <a href="/wav-to-midi/">WAV to MIDI</a>
+        <a href="/midi-to-sheet-music/">MIDI to Sheet Music</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+    </footer>
+    <script type="module" src="../src/midi-page.js"></script>
+  </body>
+</html>

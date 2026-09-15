@@ -1,0 +1,28 @@
+{
+  "url": "https://mp3miditool.com/",
+  "pageFacts": {
+    "status": 200,
+    "title": "Audio to MIDI Converter & MP3 to MIDI Converter | MP3 MIDI Tool",
+    "h1": "Convert audio to MIDI from an MP3, right in your browser.",
+    "hero": "Choose an MP3, run the audio into MIDI transcription in this browser, then download an editable .mid file. For WAV input, use the WAV to MIDI converter.",
+    "sectionHeading": "How to turn audio into editable MIDI",
+    "wavLink": "/wav-to-midi/"
+  },
+  "converter": {
+    "resultText": "Your MIDI file is ready. 5 notes were detected.\nDownload .mid",
+    "outputBytes": 93,
+    "parsedTracks": 1,
+    "parsedNotes": 5
+  },
+  "links": {
+    "homepageToWav": true,
+    "wavToHomepage": true,
+    "wavStatus": 200
+  },
+  "mobileLayout": {
+    "bodyScrollWidth": 390,
+    "viewportWidth": 390,
+    "convertButtonVisible": true
+  },
+  "errors": []
+}

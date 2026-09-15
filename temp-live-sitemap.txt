@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://mp3miditool.com/</loc></url>
+  <url><loc>https://mp3miditool.com/wav-to-midi/</loc></url>
+  <url><loc>https://mp3miditool.com/audio-to-sheet-music/</loc></url>
+  <url><loc>https://mp3miditool.com/midi-to-sheet-music/</loc></url>
+  <url><loc>https://mp3miditool.com/midi-to-mp3/</loc></url>
+  <url><loc>https://mp3miditool.com/about/</loc></url>
+  <url><loc>https://mp3miditool.com/contact/</loc></url>
+  <url><loc>https://mp3miditool.com/privacy/</loc></url>
+</urlset>

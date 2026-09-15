@@ -1,0 +1,67 @@
+{
+  "baseUrl": "https://mp3miditool.com",
+  "target": "https://midiagent.com?fp_ref=mp3miditool",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "linkHref": "https://midiagent.com?fp_ref=mp3miditool",
+      "linkText": "Explore MIDI Agent",
+      "linkVisible": true,
+      "rel": "sponsored noopener",
+      "contextPhrase": true,
+      "disclosure": "Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.",
+      "disclosureVisible": true,
+      "chineseCharacters": 0
+    },
+    {
+      "path": "/wav-to-midi/",
+      "status": 200,
+      "linkHref": "https://midiagent.com?fp_ref=mp3miditool",
+      "linkText": "Explore MIDI Agent",
+      "linkVisible": true,
+      "rel": "sponsored noopener",
+      "contextPhrase": true,
+      "disclosure": "Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.",
+      "disclosureVisible": true,
+      "chineseCharacters": 0
+    },
+    {
+      "path": "/audio-to-sheet-music/",
+      "status": 200,
+      "linkHref": "https://midiagent.com?fp_ref=mp3miditool",
+      "linkText": "Explore MIDI Agent",
+      "linkVisible": true,
+      "rel": "sponsored noopener",
+      "contextPhrase": true,
+      "disclosure": "Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.",
+      "disclosureVisible": true,
+      "chineseCharacters": 0
+    },
+    {
+      "path": "/midi-to-sheet-music/",
+      "status": 200,
+      "linkHref": "https://midiagent.com?fp_ref=mp3miditool",
+      "linkText": "Explore MIDI Agent",
+      "linkVisible": true,
+      "rel": "sponsored noopener",
+      "contextPhrase": true,
+      "disclosure": "Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.",
+      "disclosureVisible": true,
+      "chineseCharacters": 0
+    },
+    {
+      "path": "/midi-to-mp3/",
+      "status": 200,
+      "linkHref": "https://midiagent.com?fp_ref=mp3miditool",
+      "linkText": "Explore MIDI Agent",
+      "linkVisible": true,
+      "rel": "sponsored noopener",
+      "contextPhrase": true,
+      "disclosure": "Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.",
+      "disclosureVisible": true,
+      "chineseCharacters": 0
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,39 @@
+✓ Lockfile passes supply-chain policies (verified 13h ago)
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +86
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 86, reused 9, downloaded 0, added 0
+Progress: resolved 86, reused 13, downloaded 0, added 0
+Progress: resolved 86, reused 14, downloaded 0, added 0
+Progress: resolved 86, reused 15, downloaded 0, added 0
+Progress: resolved 86, reused 16, downloaded 0, added 0
+Progress: resolved 86, reused 20, downloaded 0, added 0
+Progress: resolved 86, reused 21, downloaded 0, added 0
+Progress: resolved 86, reused 64, downloaded 0, added 0
+Progress: resolved 86, reused 86, downloaded 0, added 0
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\.pnpm-store\v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 86, reused 86, downloaded 0, added 3
+Progress: resolved 86, reused 86, downloaded 0, added 8
+Progress: resolved 86, reused 86, downloaded 0, added 12
+Progress: resolved 86, reused 86, downloaded 0, added 13
+Progress: resolved 86, reused 86, downloaded 0, added 14
+Progress: resolved 86, reused 86, downloaded 0, added 15
+Progress: resolved 86, reused 86, downloaded 0, added 16
+Progress: resolved 86, reused 86, downloaded 0, added 17
+Progress: resolved 86, reused 86, downloaded 0, added 20
+Progress: resolved 86, reused 86, downloaded 0, added 21
+Progress: resolved 86, reused 86, downloaded 0, added 24
+Progress: resolved 86, reused 86, downloaded 0, added 32
+Progress: resolved 86, reused 86, downloaded 0, added 44
+Progress: resolved 86, reused 86, downloaded 0, added 53
+Progress: resolved 86, reused 86, downloaded 0, added 64
+Progress: resolved 86, reused 86, downloaded 0, added 70
+Progress: resolved 86, reused 86, downloaded 0, added 81
+Progress: resolved 86, reused 86, downloaded 0, added 86, done
+
+[ERR_PNPM_IGNORED_BUILDS] Ignored build scripts: core-js@3.50.0, esbuild@0.25.12
+
+Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.

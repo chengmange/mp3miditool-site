@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Convert audio to MIDI from MP3 in your browser, then download an editable .mid file. Your audio stays on your device." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312835f'/%3E%3Cpath d='M20 7v13.2a4 4 0 1 1-2-3.46V10.7l-8 2v9.2a4 4 0 1 1-2-3.46V10l12-3Z' fill='white'/%3E%3C/svg%3E" />
+    <title>Audio to MIDI Converter &amp; MP3 to MIDI Converter | MP3 MIDI Tool</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="MP3 MIDI Tool home">MP3<span>MIDI</span>Tool</a>
+      <nav aria-label="Primary navigation"><a href="#converter">MP3 to MIDI</a><a href="/wav-to-midi/">WAV to MIDI</a><a href="/audio-to-sheet-music/">Sheet Music</a><a href="/midi-to-sheet-music/">MIDI to Sheet Music</a><a href="/midi-to-mp3/">MIDI to MP3</a></nav>
+    </header>
+    <main>
+      <section class="hero" id="converter" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Browser-only conversion</p>
+          <h1 id="hero-title">Convert audio to MIDI from an MP3, right in your browser.</h1>
+          <p class="hero-text">Choose an MP3, run MIDI transcription in this browser, then download an editable .mid file. For WAV input, use the <a href="/wav-to-midi/">WAV to MIDI converter</a>.</p>
+          <div class="privacy-note"><span aria-hidden="true">✓</span> Your file is processed in your browser and is never uploaded to a server.</div>
+        </div>
+        <div class="converter-card" aria-live="polite">
+          <div class="converter-heading"><h2>MP3 to MIDI</h2><span class="chip">Local processing</span></div>
+          <label class="file-picker" id="drop-zone" for="audio-file">
+            <input id="audio-file" type="file" accept="audio/mpeg,.mp3" />
+            <span class="file-icon" aria-hidden="true">♫</span><span class="file-title">Choose an MP3</span><span class="file-subtitle">or drop one here</span>
+          </label>
+          <p id="file-name" class="file-name">No file selected</p>
+          <button id="convert-button" class="primary-button" type="button" disabled>Convert to MIDI</button>
+          <div class="progress-wrap" id="progress-wrap" hidden><div class="progress-label"><span id="progress-copy">Preparing audio…</span><span id="progress-value">0%</span></div><div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div></div>
+          <div id="result" class="result" hidden></div>
+          <p class="small-print">For best results, use a short clip with one clear instrument or voice.</p>
+        </div>
+      </section>
+      <section class="affiliate-callout" aria-label="MIDI Agent recommendation">
+        <p><strong>Next step for DAW work:</strong> MIDI Agent is a text-to-MIDI AI music plugin for your DAW that can generate melodies, chords, drums, and basslines from prompts.</p>
+        <a href="https://midiagent.com?fp_ref=mp3miditool" target="_blank" rel="sponsored noopener">Explore MIDI Agent</a>
+      </section>
+      <section class="how-it-works" aria-labelledby="how-title">
+        <div><p class="eyebrow">Three local steps</p><h2 id="how-title">From audio clip to note file</h2></div>
+        <ol><li><span>01</span><strong>Select</strong><p>Pick an MP3 from your device.</p></li><li><span>02</span><strong>Convert</strong><p>Analysis runs in this browser tab.</p></li><li><span>03</span><strong>Download</strong><p>Save the generated .mid file.</p></li></ol>
+      </section>
+      <section class="audio-umbrella" aria-labelledby="audio-guide-title">
+        <div class="audio-umbrella-heading">
+          <p class="eyebrow">Audio input guide</p>
+          <h2 id="audio-guide-title">From audio to MIDI: a practical guide</h2>
+          <p>Match the converter to the source file before transcription. The tool on this homepage accepts <code>.mp3</code>; the <a href="/wav-to-midi/">WAV to MIDI tool</a> accepts <code>.wav</code> and <code>.mp3</code>. Both create a downloadable <code>.mid</code> file in the browser.</p>
+        </div>
+        <div class="audio-umbrella-grid">
+          <article><span>Input</span><h3>Start with the clearest part</h3><p>Choose a passage dominated by one instrument or voice. If drums, vocals, and accompaniment overlap, isolate the part you need before asking the MIDI converter to identify notes.</p></article>
+          <article><span>Conversion</span><h3>Choose an audio to MIDI converter</h3><p>Run the file through the matching converter and download the result. The output stores pitch, start time, and duration as editable events; it does not copy the original waveform.</p></article>
+          <article><span>Repair</span><h3>Check splits, omissions, and timing</h3><p>Open the <code>.mid</code> file in a piano roll. Merge short fragments that belong to one held note, restore a missing pitch, remove false detections, then set tempo and bar alignment before arranging.</p></article>
+        </div>
+        <div class="audio-questions" aria-labelledby="audio-questions-title">
+          <p class="eyebrow" id="audio-questions-title">Quick questions</p>
+          <h3>What does audio to MIDI conversion produce?</h3>
+          <p>Audio to MIDI conversion produces editable pitch, start-time, and duration events from a recording. On this homepage, an MP3 goes in and a downloadable <code>.mid</code> file comes out; WAV input uses the separate WAV page.</p>
+          <h3>Is audio into MIDI the same as exporting the original sound?</h3>
+          <p>No. Audio into MIDI is a transcription: the browser estimates note events, so the result is a draft to check for short splits and missed notes rather than a copy of the waveform.</p>
+          <h3>Can I use M4A to MIDI or FLAC to MIDI here?</h3>
+          <p>No. The homepage file check accepts MP3 only, so <code>.m4a</code> and <code>.flac</code> files are rejected before transcription instead of being presented as supported inputs.</p>
+          <h3>What about humming to MIDI or sing to MIDI?</h3>
+          <p>The page can accept an MP3 recording of a hum or sung take. It does not record from a microphone here, and it applies the same local MP3 transcription workflow to that file.</p>
+          <h3>Is this a song to MIDI or music to MIDI converter?</h3>
+          <p>It can process a song or music clip when the clip is supplied as an MP3. Use a clear passage when you want the editable note draft to follow one part rather than the full mix.</p>
+        </div>
+        <p class="audio-test-note"><strong>Measured check:</strong> the same four-second phrase was converted from WAV and MP3 on the live site. Each run found all four source pitches and produced five note events: four long notes and one short split note. Each downloaded MIDI was 93 bytes.</p>
+      </section>
+      <article class="article-shell prose" id="article-content"></article>
+    </main>
+    <footer class="site-footer">
+      <a class="brand" href="/">MP3<span>MIDI</span>Tool</a>
+      <p>Local audio conversion. No file uploads.</p>
+      <p class="affiliate-disclosure">Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/wav-to-midi/">WAV to MIDI</a>
+        <a href="/audio-to-sheet-music/">Audio to Sheet Music</a>
+        <a href="/midi-to-sheet-music/">MIDI to Sheet Music</a>
+        <a href="/midi-to-mp3/">MIDI to MP3</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

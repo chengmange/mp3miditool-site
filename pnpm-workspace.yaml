@@ -1,0 +1,5 @@
+allowBuilds:
+  core-js: true
+  esbuild: true
+  gl: set this to true or false
+  workerd: set this to true or false

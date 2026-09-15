@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Convert a WAV file into editable MIDI in your browser. The audio stays on your device." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312835f'/%3E%3Cpath d='M20 7v13.2a4 4 0 1 1-2-3.46V10.7l-8 2v9.2a4 4 0 1 1-2-3.46V10l12-3Z' fill='white'/%3E%3C/svg%3E" />
+    <title>WAV into MIDI Converter | MP3 MIDI Tool</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="MP3 MIDI Tool home">MP3<span>MIDI</span>Tool</a>
+      <nav aria-label="Primary navigation"><a href="/#converter">MP3 to MIDI</a><a href="/wav-to-midi/" aria-current="page">WAV to MIDI</a><a href="/audio-to-sheet-music/">Sheet Music</a><a href="/midi-to-sheet-music/">MIDI to Sheet Music</a><a href="/midi-to-mp3/">MIDI to MP3</a></nav>
+    </header>
+    <main>
+      <section class="hero wav-hero" id="converter" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">WAV into MIDI</p>
+          <h1 id="hero-title">Convert a WAV file into editable MIDI.</h1>
+          <ol class="answer-steps">
+            <li>Choose a <code>.wav</code> file below.</li>
+            <li>Click <strong>Convert to MIDI</strong>.</li>
+            <li>Download the generated <code>.mid</code> file.</li>
+          </ol>
+          <div class="privacy-note"><span aria-hidden="true">✓</span> Your file is processed in your browser and is never uploaded to a server.</div>
+        </div>
+        <div class="converter-card" aria-live="polite">
+          <div class="converter-heading"><h2>WAV to MIDI converter</h2><span class="chip">Local processing</span></div>
+          <label class="file-picker" id="drop-zone" for="audio-file">
+            <input id="audio-file" type="file" accept="audio/wav,audio/x-wav,.wav,audio/mpeg,.mp3" />
+            <span class="file-icon" aria-hidden="true">♫</span><span class="file-title">Choose a WAV</span><span class="file-subtitle">or drop a WAV or MP3 here</span>
+          </label>
+          <p id="file-name" class="file-name">No file selected</p>
+          <button id="convert-button" class="primary-button" type="button" disabled>Convert to MIDI</button>
+          <div class="progress-wrap" id="progress-wrap" hidden><div class="progress-label"><span id="progress-copy">Preparing audio…</span><span id="progress-value">0%</span></div><div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div></div>
+          <div id="result" class="result" hidden></div>
+          <p class="small-print">The same converter accepts WAV and MP3 so you can compare the results without switching tools.</p>
+        </div>
+      </section>
+      <section class="affiliate-callout" aria-label="MIDI Agent recommendation">
+        <p><strong>After the WAV conversion:</strong> MIDI Agent is a text-to-MIDI AI music plugin for your DAW that can help develop editable melody, chord, drum, and bassline parts from prompts.</p>
+        <a href="https://midiagent.com?fp_ref=mp3miditool" target="_blank" rel="sponsored noopener">Explore MIDI Agent</a>
+      </section>
+
+      <section class="test-evidence" aria-labelledby="test-title">
+        <div class="test-intro">
+          <p class="eyebrow">Format comparison run</p>
+          <h2 id="test-title">The same four-note phrase, tested twice</h2>
+          <p>The source phrase contains A4, C5, E5, and G5, each lasting one second. “Long” means at least 0.50 seconds; “short” means less than 0.50 seconds.</p>
+        </div>
+        <div class="test-grid">
+          <article class="test-card"><span class="test-format">WAV input</span><strong data-test="wav-notes">5 detected notes</strong><p data-test="wav-lengths">4 long notes and 1 short note</p><p data-test="wav-missed">Missed source pitches: none</p><small data-test="wav-bytes">Downloaded MIDI: 93 bytes</small></article>
+          <article class="test-card"><span class="test-format">MP3 input</span><strong data-test="mp3-notes">5 detected notes</strong><p data-test="mp3-lengths">4 long notes and 1 short note</p><p data-test="mp3-missed">Missed source pitches: none</p><small data-test="mp3-bytes">Downloaded MIDI: 93 bytes</small></article>
+        </div>
+        <p class="test-difference" data-test="difference"><strong>Observed difference:</strong> both inputs captured all four source pitches and produced five events. WAV split A4 into a 0.0698-second event at 0.9292 seconds; MP3 instead split C5 into a 0.0594-second event at 1.9625 seconds. Both MIDI downloads were 93 bytes.</p>
+      </section>
+
+      <article class="article-shell prose wav-article">
+        <h2>How to convert WAV into MIDI without uploading the recording</h2>
+        <p>Select the WAV file in the converter above. The browser decodes it, reduces it to one audio channel at 22,050 Hz, then runs note transcription on this device. When the result appears, use <strong>Download .mid</strong>. The downloaded MIDI contains note events rather than the original waveform, so it can be moved, shortened, quantized, or assigned to another instrument in a MIDI editor.</p>
+
+        <h2>WAV to MIDI converter, WAV to MIDI file converter, and the other search phrases</h2>
+        <p>“WAV to MIDI converter,” “WAV to MIDI file converter,” “convert WAV file to MIDI,” “convert WAV to MIDI,” and “convert WAV into MIDI” all lead to the same operation on this page. One WAV goes in; one editable <code>.mid</code> file comes out. There is no separate page or hidden workflow for a different wording.</p>
+
+        <h2>What the comparison test tells you</h2>
+        <p>The test cards above come from one generated four-second phrase saved once as WAV and once as 128 kbps MP3. Both files were processed with this page’s note threshold of 0.25, onset threshold of 0.25, and minimum note length of five frames. The result records note count, long and short detections, missed source pitches, and the downloaded MIDI byte count. Those values are kept visible so the format choice can be judged from the actual run rather than a promise.</p>
+
+        <h2>When the MIDI needs editing</h2>
+        <p>A MIDI file is an interpretation of the recording, not a copy of its sound. If a chord creates extra notes or a soft attack disappears, open the <code>.mid</code> file in your editor and inspect the note starts before quantizing. For a dense mix, isolate the part you need and run that shorter WAV instead of asking the transcription to separate every instrument at once.</p>
+
+        <h2>Related conversions</h2>
+        <p>If the source is already compressed, use the <a href="/#converter">MP3 to MIDI converter</a>. If you already have MIDI and need a listenable audio file, follow the <a href="/midi-to-mp3/">MIDI to MP3 guide</a>.</p>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <a class="brand" href="/">MP3<span>MIDI</span>Tool</a>
+      <p>Local audio conversion. No file uploads.</p>
+      <p class="affiliate-disclosure">Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/#converter">MP3 to MIDI</a><a href="/audio-to-sheet-music/">Audio to Sheet Music</a><a href="/midi-to-sheet-music/">MIDI to Sheet Music</a><a href="/midi-to-mp3/">MIDI to MP3</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a>
+      </nav>
+    </footer>
+    <script type="module" src="../src/wav-page.js"></script>
+  </body>
+</html>

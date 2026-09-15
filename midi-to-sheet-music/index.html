@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Convert MIDI files to sheet music in your browser. Type 0 and Type 1 MIDI are accepted, with MusicXML and SVG downloads." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312835f'/%3E%3Cpath d='M20 7v13.2a4 4 0 1 1-2-3.46V10.7l-8 2v9.2a4 4 0 1 1-2-3.46V10l12-3Z' fill='white'/%3E%3C/svg%3E" />
+    <title>MIDI to Sheet Music | MP3 MIDI Tool</title>
+  </head>
+  <body data-page="midi-to-sheet-music">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="MP3 MIDI Tool home">MP3<span>MIDI</span>Tool</a>
+      <nav aria-label="Primary navigation"><a href="/#converter">MP3 to MIDI</a><a href="/wav-to-midi/">WAV to MIDI</a><a href="/audio-to-sheet-music/">Audio to Sheet Music</a><a href="/midi-to-sheet-music/" aria-current="page">MIDI to Sheet Music</a><a href="/midi-to-mp3/">MIDI to MP3</a></nav>
+    </header>
+    <main>
+      <section class="midi-score-hero" aria-labelledby="hero-title">
+        <div class="converter-card" aria-live="polite">
+          <div class="converter-heading"><h2>MIDI to Sheet Music</h2><span class="chip">Local processing</span></div>
+          <label class="file-picker" id="drop-zone" for="audio-file">
+            <input id="audio-file" type="file" accept="audio/midi,audio/midi-sequence,.mid,.midi" />
+            <span class="file-icon" aria-hidden="true">♫</span><span class="file-title">Choose a .mid or .midi file</span><span class="file-subtitle">Type 0 and Type 1 are accepted</span>
+          </label>
+          <p id="file-name" class="file-name">No file selected</p>
+          <label class="tempo-field" for="tempo"><span>Score tempo</span><span><input id="tempo" type="number" min="40" max="240" step="1" value="120" /> BPM</span></label>
+          <button id="convert-button" class="primary-button" type="button" disabled>Create sheet music</button>
+          <div class="progress-wrap" id="progress-wrap" hidden><div class="progress-label"><span id="progress-copy">Preparing…</span><span id="progress-value">0%</span></div><div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div></div>
+          <div id="result" class="result" hidden></div>
+          <p class="small-print">No login, no registration, and no popups.</p>
+        </div>
+        <div class="midi-answer">
+          <p class="eyebrow">Immediate answer</p>
+          <h1 id="hero-title">Convert MIDI to sheet music in your browser.</h1>
+          <p>Choose a <code>.mid</code> or <code>.midi</code> file, click <strong>Create sheet music</strong>, then review the staff that appears below. Download editable MusicXML or the rendered SVG when it is a one-page score.</p>
+          <div class="privacy-note"><span aria-hidden="true">✓</span> Your MIDI file stays in this browser. It is never uploaded to a server.</div>
+        </div>
+      </section>
+      <section class="affiliate-callout" aria-label="MIDI Agent recommendation">
+        <p><strong>For editing after notation:</strong> MIDI Agent is a text-to-MIDI AI music plugin available as VST3, AU, AAX, and standalone, with prompt-based generation for DAW workflows.</p>
+        <a href="https://midiagent.com?fp_ref=mp3miditool" target="_blank" rel="sponsored noopener">Explore MIDI Agent</a>
+      </section>
+
+      <section class="midi-facts" aria-label="MIDI page limits">
+        <div class="midi-fact"><strong>Accepted files</strong><span><code>.mid</code> and <code>.midi</code>; the parser accepts Type 0 and Type 1.</span></div>
+        <div class="midi-fact"><strong>Current hard limits</strong><span>One file up to 10 MB, up to 10 minutes, and up to 5,000 MIDI notes.</span></div>
+        <div class="midi-fact"><strong>Page count</strong><span>No fixed page-count cap. Longer scores use more browser memory and may render more slowly.</span></div>
+      </section>
+
+      <section class="score-section" id="score-section" hidden aria-labelledby="score-title">
+        <div class="score-header">
+          <div><p class="eyebrow">Generated in this tab</p><h2 id="score-title">Your sheet music</h2></div>
+          <div class="score-stats"><span id="note-count">0 notes</span><span id="page-count">0 pages</span><span id="elapsed-time">0.0 seconds</span></div>
+        </div>
+        <div id="score-output" class="score-output" aria-label="Generated sheet music"></div>
+        <div id="score-downloads" class="score-downloads"></div>
+        <p class="score-note">MusicXML keeps the notation editable. SVG is offered when the rendered score is one page; for a longer score, use your browser’s print command and choose <strong>Save as PDF</strong>.</p>
+      </section>
+
+      <article class="article-shell prose midi-score-article">
+        <h2>How to convert MIDI to sheet music</h2>
+        <p>Choose a real <code>.mid</code> or <code>.midi</code> file above. The page accepts both Type 0 and Type 1 MIDI, reads the note events already stored in the file, and draws them as a staff. Set the score tempo only when you want the displayed beat grid to use a different value.</p>
+
+        <h2>What the MIDI to sheet music converter produces</h2>
+        <p>The score is rendered in this page rather than sent to another service. Download MusicXML when you want to correct note spelling, rhythm, voices, or bar placement in notation software. Download the SVG when the result is one page and you want the same staff drawing as a scalable image. To keep a multi-page score as a PDF, use the browser’s print dialog and select <strong>Save as PDF</strong>.</p>
+
+        <h2>Why a clean MIDI file still needs checking</h2>
+        <p>MIDI stores pitches and timings, not the one perfect way to engrave them. A performance file may contain very short fragments, overlapping notes, unusual tempo events, or a melody spread across several tracks. Check the rendered measure lines and note durations before treating the result as finished sheet music.</p>
+
+        <h2>File limits and private processing</h2>
+        <p>This page accepts one MIDI file at a time. The current browser-side guard is 10 MB per file, 10 minutes of musical time, and 5,000 note events. There is no fixed page-count limit in the renderer; a long score can require more memory and take longer to draw. The file is parsed, engraved, and prepared for download in this browser only.</p>
+
+        <h2>MIDI sheet music online without an account</h2>
+        <p>No account or login is requested. Select a file, let the score render, and download the result from the same tab. The related <a href="/audio-to-sheet-music/">audio to sheet music converter</a> handles MP3, WAV, and MIDI input when the source is not already a MIDI file.</p>
+
+        <h2>Related tools</h2>
+        <p>Need note events instead of a staff? Use the <a href="/#converter">MP3 to MIDI converter</a> or the <a href="/wav-to-midi/">WAV to MIDI converter</a>. If you want to hear a MIDI file as audio, open the <a href="/midi-to-mp3/">MIDI to MP3 guide</a>.</p>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <a class="brand" href="/">MP3<span>MIDI</span>Tool</a>
+      <p>Local audio conversion. No file uploads.</p>
+      <p class="affiliate-disclosure">Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.</p>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="/#converter">MP3 to MIDI</a><a href="/wav-to-midi/">WAV to MIDI</a><a href="/audio-to-sheet-music/">Audio to Sheet Music</a><a href="/midi-to-sheet-music/">MIDI to Sheet Music</a><a href="/midi-to-mp3/">MIDI to MP3</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a></nav>
+    </footer>
+    <script type="module" src="../src/sheet-page.js"></script>
+  </body>
+</html>

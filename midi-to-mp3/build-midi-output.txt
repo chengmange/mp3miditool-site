@@ -1,0 +1,13 @@
+vite v7.1.5 building for production...
+transforming...
+✓ 6 modules transformed.
+
+(!) outDir C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\dist\midi-to-mp3 is not inside project root and will not be emptied.
+Use --emptyOutDir to override.
+
+rendering chunks...
+computing gzip size...
+../dist/midi-to-mp3/index.html                  1.26 kB │ gzip:  0.61 kB
+../dist/midi-to-mp3/assets/index-pPpvdSfW.css   6.39 kB │ gzip:  2.20 kB
+../dist/midi-to-mp3/assets/index-sy6mKCU7.js   49.10 kB │ gzip: 16.07 kB
+✓ built in 957ms

@@ -1,0 +1,18 @@
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 18px;
+}
+
+.site-footer .footer-nav a {
+  color: #1a765d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .footer-nav {
+    justify-content: flex-start;
+  }
+}

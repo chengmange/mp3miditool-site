@@ -1,0 +1,7 @@
+.affiliate-callout{width:min(1120px,calc(100% - 48px));margin:24px auto 0;padding:22px 26px;border:1px solid #b8ddd1;border-radius:16px;background:#effaf6;color:#163b35;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.affiliate-callout p{margin:0;line-height:1.55;max-width:780px}
+.affiliate-callout strong{color:#0e614a}
+.affiliate-callout a{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;padding:11px 15px;border-radius:8px;background:#12835f;color:#fff;text-decoration:none;font-weight:760;font-size:.87rem}
+.affiliate-callout a:hover{background:#0c6b4d}
+.affiliate-disclosure{font-size:.78rem;line-height:1.5;color:#6a7f85}
+@media(max-width:760px){.affiliate-callout{width:calc(100% - 40px);align-items:flex-start;flex-direction:column;padding:19px 20px;gap:15px}.affiliate-callout a{width:100%}}

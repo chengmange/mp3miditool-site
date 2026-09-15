@@ -1,0 +1,27 @@
+{
+  "url": "https://mp3miditool.com/",
+  "status": 200,
+  "details": {
+    "title": "Audio to MIDI Converter & MP3 to MIDI Converter | MP3 MIDI Tool",
+    "h1": "Convert audio to MIDI from an MP3, right in your browser.",
+    "variantCounts": {
+      "audio to midi": 5,
+      "audio into midi": 2,
+      "audio to midi converter": 1,
+      "audio to midi conversion": 2
+    },
+    "toolVisible": true,
+    "linkHref": "https://midiagent.com?fp_ref=mp3miditool",
+    "linkText": "Explore MIDI Agent",
+    "linkVisible": true,
+    "disclosure": "Disclosure: The link on this page may be an affiliate link. If you make a purchase through it, I may earn a commission.",
+    "chineseCharacters": 0
+  },
+  "mobileLayout": {
+    "bodyScrollWidth": 390,
+    "viewportWidth": 390,
+    "fileInputVisible": true,
+    "convertButtonVisible": true
+  },
+  "errors": []
+}

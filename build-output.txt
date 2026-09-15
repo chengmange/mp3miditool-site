@@ -1,0 +1,19 @@
+X [ERROR] Cannot read directory "../../../../../..": Access is denied.
+
+X [ERROR] Could not resolve "C:\\Users\\Administrator\\Documents\\Codex\\2026-09-11\\ilang-type-command-course-ai-step-2\\work\\site\\vite.config.js"
+
+failed to load config from C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\vite.config.js
+error during build:
+Error: Build failed with 2 errors:
+error: Cannot read directory "../../../../../..": Access is denied.
+error: Could not resolve "C:\\Users\\Administrator\\Documents\\Codex\\2026-09-11\\ilang-type-command-course-ai-step-2\\work\\site\\vite.config.js"
+    at failureErrorWithLog (C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\node_modules\.pnpm\esbuild@0.25.12\node_modules\esbuild\lib\main.js:1467:15)
+    at C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\node_modules\.pnpm\esbuild@0.25.12\node_modules\esbuild\lib\main.js:926:25
+    at runOnEndCallbacks (C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\node_modules\.pnpm\esbuild@0.25.12\node_modules\esbuild\lib\main.js:1307:45)
+    at buildResponseToResult (C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\node_modules\.pnpm\esbuild@0.25.12\node_modules\esbuild\lib\main.js:924:7)
+    at C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\node_modules\.pnpm\esbuild@0.25.12\node_modules\esbuild\lib\main.js:951:16
+    at responseCallbacks.<computed> (C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\node_modules\.pnpm\esbuild@0.25.12\node_modules\esbuild\lib\main.js:603:9)
+    at handleIncomingPacket (C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\node_modules\.pnpm\esbuild@0.25.12\node_modules\esbuild\lib\main.js:658:12)
+    at Socket.readFromStdout (C:\Users\Administrator\Documents\Codex\2026-09-11\ilang-type-command-course-ai-step-2\work\site\node_modules\.pnpm\esbuild@0.25.12\node_modules\esbuild\lib\main.js:581:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12)

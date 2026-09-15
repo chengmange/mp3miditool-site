@@ -1,0 +1,50 @@
+{
+  "url": "https://mp3miditool.com/audio-to-sheet-music/",
+  "status": 200,
+  "input": {
+    "file": "thirty-one-second-melody.wav",
+    "bytes": 1367144,
+    "durationSeconds": 31,
+    "sourceTones": [
+      "A4",
+      "C5",
+      "E5",
+      "G5"
+    ]
+  },
+  "conversion": {
+    "title": "Audio to Sheet Music Converter Free | MP3 MIDI Tool",
+    "h1": "Turn an audio recording into visible, downloadable sheet music.",
+    "result": "Done — 33 notes rendered across 1 page in 92.9 seconds.",
+    "noteCount": "33 notes",
+    "pageCount": "1 page",
+    "elapsed": "92.9 seconds",
+    "renderedSvgs": 1,
+    "scoreText": "= 120Transcribed melody357810121416thirty-one-second-melody",
+    "fileAccept": "audio/mpeg,audio/wav,audio/x-wav,audio/midi,.mp3,.wav,.mid,.midi",
+    "loginControls": 0,
+    "accountClaim": true,
+    "wallSeconds": 93
+  },
+  "downloads": {
+    "musicXmlBytes": 5811,
+    "musicXmlPitchElements": 35,
+    "musicXmlValidRoot": true,
+    "svgBytes": 127531,
+    "svgValidRoot": true
+  },
+  "links": {
+    "sheetToHome": true,
+    "sheetToWav": true,
+    "homeToSheet": true,
+    "wavToSheet": true,
+    "homeStatus": 200,
+    "wavStatus": 200
+  },
+  "mobileLayout": {
+    "bodyScrollWidth": 390,
+    "viewportWidth": 390,
+    "convertButtonVisible": true
+  },
+  "errors": []
+}
